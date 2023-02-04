@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MULTIPLICATION TABLE</title>
+</head>
+
+<body>
+    <button type="button" onclick="createTable()" id ="test"> Click to Print Table </button>
+
+    <script type="text/javascript">
+        tr=prompt("Enter number of rows you want in Multiplication table");
+        var sk =parseInt(tr);
+        pr=prompt("Enter number of columns you want in multiplication table");
+        var rk =parseInt(pr);
+        
+    function createTable()
+    {
+        bd = document.body;
+        tble  = document.createElement('Table');
+  
+        tble.style.border = '2px solid black';
+        tble.style.width  = '300px';
+
+        for( i = 1; i <= sk; i++){
+            tr = tble.insertRow();
+        for(j = 1; j <= rk; j++){
+            td = tr.insertCell();
+            td.appendChild(document.createTextNode(i*j));
+            td.style.border = '5px solid red';
+            }     
+    
+        bd.appendChild(tble);
+     
+        }
+        document.getElementById("test").remove();
+    }
+    tablecreate(sk,rk);
+   
+    </script>
+</body>
+</html>
